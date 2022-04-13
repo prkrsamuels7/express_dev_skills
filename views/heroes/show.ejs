@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <%- include('../partials/head.ejs') %>
-  <body>
+<%- include('../partials/head.ejs') %>
   <%- include('../partials/nav.ejs') %> 
-  </body>
-  <h2><%= hero.heroName %></h2>
-  <p>Hero Profile #<%= hero.id %></p>
-  <p>INFO -- <%= hero.info %></p>
-</html>
+    <h2><%= hero.heroName %></h2>
+    <strong><p>Hero Profile #<%= hero.id %></p></strong>
+    <p><%= hero.info %></p>
+<%- include('../partials/footer.ejs') %> >
+    

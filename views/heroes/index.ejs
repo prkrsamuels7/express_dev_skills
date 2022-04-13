@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">  
 <%- include('../partials/head.ejs') %>
-<body>
 <%- include('../partials/nav.ejs') %> 
-
-<ul>
-  <% heroes.forEach(hero => { %>
-    <li>
-      <a href="/heroes/<%= hero.id %>"><%= hero.heroName %></a>
-      -
-      <%= hero.blurb %> 
-    </li>
-  <% }) %>
-</ul>
-
-</body>
-</html>
+  <ul>
+    <% heroes.forEach(hero => { %>
+      <li>
+        <a href="/heroes/<%= hero.id %>"><strong><%= hero.heroName %></strong></a>
+        -
+        <%= hero.blurb %> 
+      </li>
+    <% }) %>
+  </ul>
+<%- include('../partials/footer.ejs') %>
