@@ -13,6 +13,6 @@ function index(req, res) {
 
 function show(req, res) {
   res.render('heroes/show', {
-    heroes: Hero.getOne(req.params.id) 
+    hero: Hero.getOne(req.params.id) 
   });
 };
