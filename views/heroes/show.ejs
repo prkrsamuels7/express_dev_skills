@@ -1,7 +1,18 @@
 <%- include('../partials/head.ejs') %>
-  <%- include('../partials/nav.ejs') %> 
+<%- include('../partials/nav.ejs') %> 
   <h2><%= hero.heroName %></h2>
   <strong><p>Hero Profile #<%= hero.id %></p></strong>
   <p><%= hero.info %></p>
-<%- include('../partials/footer.ejs') %> >
+  <form class="delete-hero" action="/heroes/<%= hero.id %>?_method=DELETE" class="delete-form"
+  method="POST">
+    <button>Remove</button>
+  </form>
+  <div class="edit-hero">
+    <button><a href="/heroes/<%= hero.id %>/edit">Edit Hero</a></button>
+  </div>
+    
+    
+    
+    
+<%- include('../partials/footer.ejs') %>
     

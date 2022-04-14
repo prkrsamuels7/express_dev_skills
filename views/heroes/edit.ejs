@@ -1,0 +1,16 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/nav.ejs') %> 
+  <h2>Edit Hero</h2>
+  <div class="edit-hero content">
+    <form action="/heroes/<%= hero.id %>?_method=PUT" class="update-form" method="POST">
+      <label for="heroName">Superhero Name:</label>     
+      <input type="text" name="heroName" value="<%= hero.heroName %>">
+      <label for="blurb">Hero Blurb:</label>
+      <input type="text" name="blurb" value="<%= hero.blurb %>">
+      <label for="info">Hero Info:</label>
+      <textarea name="info" value="<%= hero.info %>"></textarea>
+      <button type="submit">Save Hero</button>
+    </form>
+  </div>
+<%- include('../partials/footer.ejs') %> >
+    

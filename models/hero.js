@@ -1,6 +1,9 @@
 module.exports = {
   getAll,
   getOne,
+  create,
+  deleteOne,
+  update,
 };
 
 const heroes = [
@@ -13,6 +16,25 @@ const heroes = [
   {heroName: 'Ironman', id: 4747, blurb: 'Ad eu id consequat id dolore.', 
   info: 'Aliquip elit quis sint exercSit quis consectetur proident magna officia dolor labore nisi et adipisicing ad. Sint voluptate nostrud pariatur ad et aliqua. Non esse sint anim non eiusmod velit excepteur aliquip voluptate qui in. Officia id laborum ex pariatur tempor ea.itation Lorem deserunt ut cupidatat aliqua qui ipsum culpa. Exercitation ex ullamco magna aliqua in aliqua velit aute aliquip ut. Cillum nisi do do occaecat est dolor dolor ipsum labore. Ad aliquip elit irure non.'}
 ];
+
+function update(id, body) {
+  id = parseInt(id);
+  const idx = heroes.findIndex(hero => hero.id === id);
+  heroes[idx].heroName = body.heroName;
+  heroes[idx].blurb = body.blurb;
+  heroes[idx].info = body.info;
+};
+
+function deleteOne(id) {
+  id = parseInt(id);
+  const idx = heroes.findIndex(hero => hero.id === id);
+  heroes.splice(idx, 1);
+};
+
+function create(hero) {
+  hero.id = Date.now() % 10000;
+  heroes.push(hero);
+};
 
 function getAll() {
   return heroes;

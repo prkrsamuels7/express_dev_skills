@@ -1,14 +1,14 @@
 <%- include('../partials/head.ejs') %>
 <%- include('../partials/nav.ejs') %> 
-<div class="create-blog content">
-  <form>
-    <label for="title">Superhero Name:</label>
-    <input type="text" id="title" required>
-    <label for="snippet">Hero Blurb:</label>
-    <input type="text" id="snipped" required>
-    <label for="body">Hero Info:</label>
-    <textarea id="body" required></textarea>
-    <button>Submit</button>
-  </form>
-</div>
+  <div class="create-hero content">
+    <form action="/heroes" method="post" autocomplete="off">
+      <label for="heroName">Superhero Name:</label>
+      <input type="text" name="heroName" required>
+      <label for="snippet">Hero Blurb:</label>
+      <input type="text" name="blurb" required>
+      <label for="body">Hero Info:</label>
+      <textarea name="info" required></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
 <%- include('../partials/footer.ejs') %>

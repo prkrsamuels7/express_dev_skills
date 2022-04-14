@@ -4,6 +4,31 @@ module.exports = {
   index,
   show,
   new: newHero,
+  create,
+  delete: deleteHero,
+  edit,
+  update,
+};
+
+function update(req, res) {
+  Hero.update(req.params.id, req.body);
+  res.redirect('/heroes');
+};
+
+function edit(req, res) {
+  res.render('heroes/edit', {
+    hero: Hero.getOne(req.params.id)
+  });
+};
+
+function deleteHero(req, res) {
+  Hero.deleteOne(req.params.id);
+  res.redirect('/heroes');
+};
+
+function create(req, res) {
+  Hero.create(req.body);
+  res.redirect('/heroes');
 };
 
 function newHero(req, res) {

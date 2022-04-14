@@ -14,6 +14,18 @@ router.get('/new', heroesCtrl.new);
 // GET /heroes/:id  (show functionality)
 router.get('/:id', heroesCtrl.show);
 
+// POST /heroes (create functionality)
+router.post('/', heroesCtrl.create);
+
+// DELETE /heroes/:id (delete functionality)
+router.delete('/:id', heroesCtrl.delete);
+
+// GET /heroes/:id/edit  (edit functionality)
+router.get('/:id/edit', heroesCtrl.edit);
+
+// PUT /heroes/:id  (update functionality)
+router.put('/:id', heroesCtrl.update);
+
 
 
 

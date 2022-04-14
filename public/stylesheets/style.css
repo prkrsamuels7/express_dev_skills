@@ -59,25 +59,25 @@ h3{
 /* index styles */
 /* details styles */
 /* create styles */
-.create-blog form{
+.create-hero form{
   max-width: 400px;
   margin: 0 auto;
 }
-.create-blog input,
-.create-blog textarea{
+.create-hero input,
+.create-hero textarea{
   display: block;
   width: 100%;
   margin: 10px 0;
   padding: 8px;
 }
-.create-blog label{
+.create-hero label{
   display: block;
   margin-top: 24px;
 }
 textarea{
   height: 120px;
 }
-.create-blog button{
+.create-hero button{
   margin-top: 20px;
   background: crimson;
   color: white;
@@ -85,4 +85,50 @@ textarea{
   border: 0;
   font-size: 1.2em;
   cursor: pointer;
+}
+
+.delete-hero button {
+  margin-top: 20px;
+  background: crimson;
+  color: white;
+  padding: 6px;
+  border: 0;
+  font-size: .6em;
+  cursor: pointer;
+}
+
+.edit-hero form{
+  max-width: 400px;
+  margin: 0 auto;
+}
+.edit-hero input,
+.edit-hero textarea{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}
+.edit-hero label{
+  display: block;
+  margin-top: 24px;
+}
+textarea{
+  height: 120px;
+}
+.edit-hero button{
+  margin-top: 20px;
+  background: crimson;
+  color: white;
+  padding: 6px;
+  border: 0;
+  font-size: .6em;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #222;
+}
+
+a:link {
+  color:#222;
 }
